@@ -1,0 +1,53 @@
+/* STILE GENERALE */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* LOGO SCUOLA */
+.logo {
+    max-height: 40px !important; /* Forza la dimensione */
+    width: auto !important; /* Mantiene le proporzioni */
+}
+
+/* HEADER MIGLIORATO */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+}
+
+/* EFFETTO ZOOM SU SEZIONI */
+.fixed-image {
+    width: 100%;
+    height: 180px; /* Imposta un'altezza fissa */
+    object-fit: cover; /* Ritaglia e adatta l'immagine senza deformarla */
+}
+
+/* Effetto zoom al passaggio del mouse */
+.zoom {
+    transition: transform 0.3s ease-in-out;
+}
+
+.zoom:hover {
+    transform: scale(1.05);
+}
+
+
+/* FOOTER */
+footer p {
+    margin-bottom: 0;
+}
+
+footer a {
+    color: #17a2b8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

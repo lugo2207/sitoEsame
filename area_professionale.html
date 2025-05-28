@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Sostituisci [nome-pagina] con il nome della sezione -->
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +6,7 @@
     <title>area_personale</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #969eb1;
@@ -48,6 +48,49 @@
             border-left: 3px solid var(--primary-color);
             padding-left: 2rem;
         }
+
+        .subject-card {
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 1.5rem;
+            border: none;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .subject-card .card-header {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-weight: 500;
+            padding: 1rem 1.5rem;
+        }
+
+        .project-link {
+            display: block;
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.5rem;
+            background: white;
+            border-radius: 0.25rem;
+            color: var(--dark-color);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .project-link:hover {
+            background: #f0f4f8;
+            transform: translateX(5px);
+        }
+
+        .subject-icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
@@ -67,34 +110,130 @@
     </header>
 
     <main class="container">
-            <!-- Contenuto principale -->
-        <div class="text-center mb-5">
-            <div class="section-emoji">🚀</div>
-            <h1 class="display-6 fw-bold">Area Professionale</h1>
-        </div>
+        <!-- Contenuto principale -->
+        <div class="page-content">
+            <div class="text-center mb-5">
+                <h1 class="display-6 fw-bold">Area Professionale</h1>
+                <p class="lead">Progetti e lavori svolti nelle materie di indirizzo</p>
+            </div>
 
-        <div class="content-block">
-            <h3>Competenze Tecniche</h3>
-            <div class="progress mb-3" style="height: 25px">
-                <div class="progress-bar" role="progressbar" style="width: 85%">Web Design</div>
+            <!-- Sezione Informatica -->
+            <div class="content-block">
+                <div class="subject-card card">
+                    <div class="card-header d-flex align-items-center">
+                        <h2 class="h4 mb-0">Informatica</h2>
+                    </div>
+                    <div class="card-body">
+                        <a href="https://helpdesk.sviluppo.host/login.php" class="project-link">
+                            <strong>Help Desk:</strong> Sviluppo di un'applicazione gestionale in php e C# / 2024-2025
+                            <p class="mb-0 small text-muted">Il mio compito è stato quello di implementare le funzionalità riguardo le attività di un ticket</p>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1Vok76eypewL6EI9a84CN9c_lSPxH--Jp/view?usp=drive_link" class="project-link">
+                            <strong>Parco sovrano:</strong> Progetto dell'anno / 2023-2024
+                            <p class="mb-0 small text-muted">Il progetto è stato realizzato con il mio collega Pranzo Cristian. C'è stato un approccio differente data l'introduzione dei database nel codice</p>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1ZuH6fjoWiDPHCxmU4q6VRKYQjlK6lDwb/view?usp=drive_link" class="project-link">
+                            <strong>Drop the game:</strong> Progetto gioco dell'anno in C# / 2022-2023
+                            <p class="mb-0 small text-muted">Gioco dell'anno realizzato in gruppo di 3. E' stato il primo approccio a un progetto importante</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sezione Sistemi e Reti -->
+            <div class="content-block">
+                <div class="subject-card card">
+                    <div class="card-header d-flex align-items-center">
+                        <h2 class="h4 mb-0">Sistemi e Reti</h2>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="project-link">
+                            <strong>Progetto 1:</strong> Configurazione rete LAN
+                            <p class="mb-0 small text-muted">Progettazione e implementazione di una rete locale con VLAN</p>
+                        </a>
+                        <a href="#" class="project-link">
+                            <strong>Progetto 2:</strong> Virtualizzazione con VMware
+                            <p class="mb-0 small text-muted">Creazione di macchine virtuali e configurazione di servizi di rete</p>
+                        </a>
+                        <a href="#" class="project-link">
+                            <strong>Progetto 3:</strong> Sicurezza informatica
+                            <p class="mb-0 small text-muted">Analisi delle vulnerabilità e configurazione firewall</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sezione TPSIT -->
+            <div class="content-block">
+                <div class="subject-card card">
+                    <div class="card-header d-flex align-items-center">
+                        <h2 class="h4 mb-0">TPSIT (Tecnologie e Progettazione di Sistemi Informatici e Telecomunicazioni)</h2>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="project-link">
+                            <strong>Progetto 1:</strong> Progettazione database relazionale
+                            <p class="mb-0 small text-muted">Modellazione ER e implementazione con MySQL</p>
+                        </a>
+                        <a href="#" class="project-link">
+                            <strong>Progetto 2:</strong> API REST con Node.js
+                            <p class="mb-0 small text-muted">Sviluppo backend per applicazione e-commerce</p>
+                        </a>
+                        <a href="#" class="project-link">
+                            <strong>Progetto 3:</strong> Documentazione di sistema
+                            <p class="mb-0 small text-muted">Redazione manuale tecnico per applicazione web</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sezione Intelligenza Artificiale -->
+            <div class="content-block">
+                <div class="subject-card card">
+                    <div class="card-header d-flex align-items-center">
+                        <h2 class="h4 mb-0">Intelligenza Artificiale</h2>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="project-link">
+                            <strong>Progetto 1:</strong> Classificazione immagini con TensorFlow
+                            <p class="mb-0 small text-muted">Riconoscimento di cifre scritte a mano</p>
+                        </a>
+                        <a href="#" class="project-link">
+                            <strong>Progetto 2:</strong> Chatbot con NLP
+                            <p class="mb-0 small text-muted">Assistente virtuale per domande frequenti</p>
+                        </a>
+                        <a href="#" class="project-link">
+                            <strong>Progetto 3:</strong> Analisi predittiva
+                            <p class="mb-0 small text-muted">Previsione vendite con regressione lineare</p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-</main>
+    </main>
+
     <!-- Footer (uguale all'index) -->
-    <footer class="bg-dark text-white py-5">
+    <footer class="bg-dark text-white py-4">
         <div class="container">
             <div class="row g-4">
-                <div class="col-md-4">
+                <div class="col-md-5">
                     <h4>Contatti</h4>
-                    <ul class="list-unstyled footer-links">
-                        <li class="mb-2">📧 <a href="mailto:email@esempio.com">st10512@iismarconipieralisi.it</a></li>
-                        <li class="mb-2">📱 <a href="tel:+390123456789">+39 327 687 9706</a></li>
-                        <li>📍 I.I.S. Marconi-Pieralisi, Jesi (AN)</li>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> <a href="mailto:st10512@iismarconipieralisi.it" class="text-white">st10512@iismarconipieralisi.it</a></li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> <a href="tel:+393276879706" class="text-white">+39 327 687 9706</a></li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> I.I.S. Marconi-Pieralisi, Jesi (AN)</li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h4>Diritti</h4>
                     <p class="small">&copy; 2025 Andreoni Luca<br>Tutti i diritti riservati</p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Segui il mio percorso</h4>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-github"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

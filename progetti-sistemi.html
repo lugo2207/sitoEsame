@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetti Sistemi - Andreoni Luca</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #969eb1;
+            --secondary-color: #9098b1;
+            --dark-color: #1f2937;
+            --light-color: #f9fafb;
+            --accent-color: #3a6ea5;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        .header-gradient {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .page-content {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-emoji {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .carousel-container {
+            background: linear-gradient(to bottom right, #e9f2fa, #d6e4f0);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(58, 110, 165, 0.8);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(58, 110, 165, 0.4);
+        }
+
+        .carousel-indicators .active {
+            background-color: var(--primary-color);
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+        
+        .project-description {
+            background: white;
+            border-radius: 0 0 8px 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-top: -5px;
+        }
+        
+        .project-title {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-tech {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .carousel-image {
+            border-radius: 8px 8px 0 0;
+            height: 500px;
+            object-fit: cover;
+        }
+        
+        .carousel-item {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .carousel-inner {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .card {
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-title {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+        
+        .tech-badge {
+            background-color: #e9f2fa;
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .page-content {
+                padding: 1.5rem;
+            }
+            
+            .carousel-image {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-gradient text-white py-5">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <img src="img/logoScuola.png" alt="Logo scuola" class="me-3" style="height: 60px">
+                    <h1 class="h3 mb-0">Andreoni Luca</h1>
+                </div>
+                <nav class="d-none d-md-block">
+                    <a href="index.html" class="text-white text-decoration-none me-3">Home</a>
+                    <a href="area_professionale.html" class="text-white text-decoration-none fw-bold">Area Professionale</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-4">
+        <div class="page-content">
+            <!-- Titolo sezione -->
+            <div class="text-center mb-4">
+                <h1 class="display-5 fw-bold">Progetti Sistemi e Reti</h1>
+                <p class="lead mt-2">I progetti realizzati durante il corso di Sistemi e Reti</p>
+            </div>
+
+            <!-- Introduzione -->
+            <div class="mb-4 p-3 bg-light rounded">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h3><i class="fas fa-network-wired me-2 text-primary"></i> Progetti di Reti e Infrastrutture</h3>
+                        <p class="mb-0">Durante il corso di Sistemi e Reti, ho sviluppato diversi progetti pratici che mi hanno permesso di applicare le conoscenze teoriche acquisite in classe e di sviluppare competenze tecniche avanzate.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                        <span class="badge bg-primary p-2 fs-6"> Più di 10 progetti completati</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carosello Progetti -->
+            <div class="carousel-container">
+                <h3 class="section-title"><i class="fas fa-laptop-code me-2"></i> Presentazione dei progetti</h3>
+                <p>Di seguito i progetti più significativi che ho realizzato, con una breve descrizione delle tecnologie utilizzate e delle competenze acquisite.</p>
+                
+                <div id="progettiCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#progettiCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#progettiCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#progettiCarousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#progettiCarousel" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#progettiCarousel" data-bs-slide-to="4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <!-- Progetto 1 -->
+                        <div class="carousel-item active">
+                            <img src="img/IoT.png" class="d-block w-100 carousel-image" alt="Infrastruttura di rete">
+                            <div class="project-description">
+                                <div class="project-title">Infrastruttura di Rete Aziendale</div>
+                                <div class="project-tech"><i class="fas fa-microchip me-1"></i> Cisco Packet Tracer, Router, Switch</div>
+                                <p>Progettazione e implementazione di un'infrastruttura di rete per un'azienda con 3 sedi interconnesse, VLAN, firewall e politiche di sicurezza.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Progetto 2 -->
+                        <div class="carousel-item">
+                            <img src="img/accessList.png" class="d-block w-100 carousel-image" alt="Server virtuali">
+                            <div class="project-description">
+                                <div class="project-title">Virtualizzazione di Server</div>
+                                <div class="project-tech"><i class="fas fa-server me-1"></i> VMware, Hyper-V, Linux</div>
+                                <p>Configurazione di un ambiente virtualizzato con 3 server (Windows Server, Linux, Firewall) su un singolo host fisico con gestione delle risorse.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Progetto 3 -->
+                        <div class="carousel-item">
+                            <img src="img/VlanNatPat.png" class="d-block w-100 carousel-image" alt="Sicurezza informatica">
+                            <div class="project-description">
+                                <div class="project-title">Sistema di Sicurezza Informatica</div>
+                                <div class="project-tech"><i class="fas fa-shield-alt me-1"></i> Firewall, IDS, VPN</div>
+                                <p>Implementazione di un sistema di sicurezza completo con firewall, sistema di rilevamento intrusioni e VPN per accesso remoto sicuro.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Progetto 4 -->
+                        <div class="carousel-item">
+                            <img src="img/VlanDhcpPosta.png" class="d-block w-100 carousel-image" alt="Cloud computing">
+                            <div class="project-description">
+                                <div class="project-title">Migrazione al Cloud</div>
+                                <div class="project-tech"><i class="fas fa-cloud me-1"></i> AWS, Azure, Docker</div>
+                                <p>Piano di migrazione di servizi aziendali in ambiente cloud con configurazione di macchine virtuali, storage e servizi gestiti.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#progettiCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Precedente</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#progettiCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Successiva</span>
+                    </button>
+                </div>
+            </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <h4>Contatti</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> <a href="mailto:st10512@iismarconipieralisi.it" class="text-white">st10512@iismarconipieralisi.it</a></li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> <a href="tel:+393276879706" class="text-white">+39 327 687 9706</a></li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> I.I.S. Marconi-Pieralisi, Jesi (AN)</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Diritti</h4>
+                    <p class="small">&copy; 2025 Andreoni Luca<br>Tutti i diritti riservati</p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Segui il mio percorso</h4>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-github"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Inizializzazione del carosello con intervallo automatico
+        document.addEventListener('DOMContentLoaded', function() {
+            const myCarousel = new bootstrap.Carousel(document.getElementById('progettiCarousel'), {
+                interval: 5000,
+                wrap: true
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Sostituisci [nome-pagina] con il nome della sezione -->
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>area_personale</title>
+    <title>Educazione Civica - Andreoni Luca</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #969eb1;
@@ -30,6 +30,8 @@
             padding: 3rem;
             margin: 2rem 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 2rem auto;
         }
 
         .section-emoji {
@@ -48,10 +50,91 @@
             border-left: 3px solid var(--primary-color);
             padding-left: 2rem;
         }
+
+        .subject-card {
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 1.5rem;
+            border: none;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .subject-card .card-header {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-weight: 500;
+            padding: 1rem 1.5rem;
+        }
+
+        .project-link {
+            display: block;
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.5rem;
+            background: white;
+            border-radius: 0.25rem;
+            color: var(--dark-color);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .project-link:hover {
+            background: #f0f4f8;
+            transform: translateX(5px);
+        }
+
+        .subject-icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+        
+        .page-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .page-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .logo-placeholder {
+            height: 60px;
+            width: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .instruction-box {
+            background: #eef2f7;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+            border-left: 4px solid var(--primary-color);
+        }
     </style>
 </head>
 <body>
-    <!-- Header (uguale all'index) -->
+    <!-- Header -->
     <header class="header-gradient text-white py-5">
         <div class="container">
             <div class="d-flex align-items-center justify-content-between">
@@ -67,28 +150,41 @@
     </header>
 
     <main class="container">
-                <div class="text-center mb-5">
-            <div class="section-emoji"></div>
-            <h1 class="display-6 fw-bold">Educazione Civica</h1>
-        </div>
+        <!-- Contenuto principale -->
+        <div class="page-content">
+            <div class="text-center mb-5">
+                <h1 class="display-6 fw-bold page-title">Educazione Civica</h1>
+                <p class="lead">Progetti e lavori svolti in educazione civica</p>
+            </div>
 
-        <div class="content-block">
-            <h3>Progetti Sociali</h3>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5>Progetto Ambiente</h5>
-                            <p>Descrizione iniziativa ecologica</p>
-                        </div>
+            <!-- Sezione Educazione Civica -->
+            <div class="content-block">
+                <div class="subject-card card">
+                    <div class="card-header d-flex align-items-center">
+                        <h2 class="h4 mb-0">
+                            <i class="fas fa-balance-scale subject-icon"></i>
+                            Educazione Civica
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <!-- Primo progetto -->
+                        <a href="https://st10512.wixsite.com/compito-di-realta" class="project-link">
+                            <strong>Protezione dati per un'etica digitale</strong>
+                            <p class="mb-0 small text-muted">Questo sito web esamina i rischi a cui l'intelligenza artificiale può portare, come affidabilità dei risultati e la protezione dei nostri dati.</p>
+                        </a>
+                        
+                        <!-- Secondo progetto -->
+                        <a href="https://docs.google.com/document/d/1jIQHOjVVm809ILROivq-4PIg6n1GyJ9b/edit?usp=sharing&ouid=117745093017559091014&rtpof=true&sd=true" class="project-link">
+                            <strong>IO NON PARTECIPO ALLA GUERRA, E’LA GUERRA CHE PARTECIPA A ME</strong>
+                            <p class="mb-0 small text-muted">Questo documento simula un discorso a una conferenza dell' ONU. L'intervento analizza come la propaganda e la manipolazione dell'informazione siano armi decisive nei conflitti, dal Novecento a oggi.</p>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-</main>
+    </main>
 
-
-    <!-- Footer (uguale all'index) -->
+    <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container">
             <div class="row g-4">
